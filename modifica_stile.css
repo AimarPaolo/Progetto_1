@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitore {
+    background-color: #e8f6e5;
+    padding: 20px;
+    /*in questo caso si utilizza border-radius per creare dei bordi smussati*/
+    border-radius: 8px;
+    /*utilizzo box-shadow per creare dei bordi e delimitare la zona in cui andrò
+    ad inserire i campi del body html*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.707);
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+h1, form {
+    display: inline-block;
+    text-align: left; 
+    width: 100%; 
+}
+
+form {
+    max-width: 80%; 
+    /* Limita la larghezza massima del form */
+    width: 100%; 
+    /* Larghezza del 100% per rendere il form responsivo */
+    margin: 0 auto; 
+    /* Centra il form orizzontalmente */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/*imposto la grandezza dei bottoni a 5px x 10px*/
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+/*per il momento utilizzo un unico file css sia per la home che per la pagina creata dal server php, sarebbe forse necessario utilizzarne 
+due diverse*/
+.php{
+    text-align: center;
+    color: blue;
+}
