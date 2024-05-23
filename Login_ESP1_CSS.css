@@ -50,10 +50,3 @@ button {
     margin-top: 10px;
     padding: 5px 10px;
 }
-
-/*per il momento utilizzo un unico file css sia per la home che per la pagina creata dal server php, sarebbe forse necessario utilizzarne 
-due diverse*/
-.php{
-    text-align: center;
-    color: blue;
-}

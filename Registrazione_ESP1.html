@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Interfaccia Utente ESP1</title>
+        <meta name="author" content="Paolo Aimar">
+        <link rel="stylesheet" href="Registrazione_ESP1_CSS.css">
+        <script src="Check.js"></script>
+    </head>
+    <body>
+        <div class="contenitore">
+            <h1>Registrati</h1>
+            <form action="Home_ESP1.php" id="contactForm" name="contactForm" method="get" onsubmit="return validateForm('contactForm');">
+                <p>
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" placeholder="Inserire l'email" required>
+                </p>
+                <p>
+                    <label for="password">password:</label>
+                    <input type="password" name="pswrd" id="pswrd" placeholder="Inserire la password" required>
+                </p>
+                <div>
+                    Per la password inserire almeno 8 caratteri incluse lettere (maiuscole e minuscole), numeri e caratteri speciali.
+                </div>
+                <p>
+                    <button type="submit" id="reg" name="reg">Crea utente</button>
+                    <button type="reset" id="clear" name="clear">Cancella</button>
+
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
