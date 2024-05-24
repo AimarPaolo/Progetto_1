@@ -30,7 +30,9 @@ label {
     color: #555555;
     text-align: left;
 }
-
+/*Padding is used to create space around an element's content, inside of any defined borders (possibile vederlo anche attraverso 
+il tasto ispeziona) --> modifico la casella di testo in input
+ingrandendo la parte di inserimento di testo e arrotondando anche in questo caso i bordi*/
 input[type="email"],
 input[type="password"] {
     width: calc(100% - 20px);
@@ -47,7 +49,7 @@ div {
     margin-bottom: 20px;
     text-align: left;
 }
-
+/*creo un bottone con gli angoli smussati (border-radius) e aggiungo i margini e altre caratteristiche*/
 button {
     width: calc(50% - 10px);
     padding: 10px;
@@ -67,7 +69,8 @@ button {
 #reg:hover {
     background-color: #218838;
 }
-
+/*In questo caso coloro il bottone in un certo modo e, quanto punto con il mouse su quel determinato bottone 
+rendo il colore più scuro, per far capire all'utente in quale punto della pagina si trova*/
 #clear {
     background-color: #dc3545;
     color: white;

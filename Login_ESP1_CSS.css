@@ -50,3 +50,13 @@ button {
     margin-top: 10px;
     padding: 5px 10px;
 }
+/*aggiungo anche in questo caso del codice CSS per modificare la casella per l'inserimento dei dati nella fase di login*/
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
