@@ -109,6 +109,10 @@ h2 {
 }
 
 @media print {
+    /*inserisco il font serif che è caratteristico della stampa*/
+    body{
+        font-family: serif;  
+    }
     .evento {
         flex-direction: column;
         align-items: center;
@@ -123,6 +127,48 @@ h2 {
         text-align: left;
     }
 }
+/*utilizzo come sempre sans-serif quando non sono in stampa*/
+.costoBiglietto{
+    color: rgb(52, 70, 212);
+    font-family: sans-serif;
+    margin: auto;
+    font-style: italic;
+    /*meglio più opaco*/
+    opacity: 0.6;
+}
+.bottoniFinali {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ddd;
+}
 
+.bottoniFinali input[type="submit"],
+.bottoniFinali input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottoniFinali input[type="submit"] {
+    background-color: #5e4caf; 
+    color: white;
+}
+
+.bottoniFinali input[type="reset"] {
+    background-color: #36bef4; 
+    color: white;
+}
+
+.bottoniFinali input[type="submit"]:hover{
+    background-color: #080345;
+}
+.bottoniFinali input[type="reset"]:hover {
+    background-color: #0545d9;
+}
 /*dalle slide + appunti: clear non accetta altri contenitori flottanti ai lati mentre float crea dei contenitori 
 mobili che possono essere posizionati utilizzando float left, right etc.*/

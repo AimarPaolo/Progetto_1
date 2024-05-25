@@ -44,3 +44,22 @@ function decrementValue(idCounter){
     console.log(document.getElementById(idCounter).value);
     document.getElementById(idCounter).value = parseInt(counter) - 1;
 }
+
+function validateForm(f1){
+    const form = document.getElementById(f1);
+    let somma = 0;
+    /*utilizzo la grandezza di eventi per capire quanti ne sono stati creati, in questo modo posso creare un contatore*/
+    let eventi = document.getElementsByClassName("evento");
+    //creo un contatore che mi guarda quanti biglietti ha acquistato il cliente, se questa è uguale a zero mando il messaggio di errore 
+    //dicendo che deve selezionare almeno un biglietto da acquistare
+    for(let i=1; i<eventi.length; i++){
+        somma += parseInt(document.getElementById("counter"+i).value);
+    }
+    /*console.log(somma);*/
+    if(somma == 0){
+        window.alert("Bisogna selezionare almeno un articolo");
+        return false;
+    }else{
+        return true;
+    }
+}
