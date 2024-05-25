@@ -6,7 +6,7 @@ body {
 }
 
 .contenitore {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -15,33 +15,70 @@ body {
 }
 
 h1 {
-    font-size: medium;
+    font-size: 24px; /* Increased font size for better readability */
     text-align: center;
     color: #333;
 }
 
 .evento {
+    /*utilizzo le flexbox per adattare la grandezza delle immagini a quello della descrizione dell'evento, che altrimenti risulterebbe
+    sproporzionato nelle misure --> link per le flexbox: https://www.w3schools.com/css/css3_flexbox_container.asp*/
+    /*display: flex; */
     margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 20px; 
+    background-color: #efefef;
     border-radius: 8px;
+    overflow: hidden; 
 }
 
 .evento img {
-    max-width: 200px; /* Imposta la larghezza massima dell'immagine */
-    height: auto; /* Mantieni l'aspetto proporzionato */
+    /*modificando il tasto ispeziona fino a quando non si ottiene un'immagine più o meno corretta*/
+    max-width: 200px;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 20px;
     border-radius: 8px;
+    float: left;
 }
 
-.evento time {
-    display: block;
-    text-align: center;
+.evento .descrizione {
+    flex: 1; 
+    color: #333;
+    line-height: 1.6;
 }
 
-.datetime{
-    text-align: left;
-}
-
-.descrizione{
+/* .scadenza{
     clear: both;
+    //con display block mando a capo la scadenza e questa dovrebbe occupare tutto lo spazio disponibile nella riga
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    color: #666;
+    //inserisco clear both per mandare a capo la data ed inserirla subito sotto l'immagine
+    }*/
+.scadenza {
+    clear: both;
+    display: block;
+    text-align: left;
+    margin-top: 40px;
+    color: #666;
 }
+@media (max-width: 600px) {
+    .evento {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .evento img {
+        margin: 0 0 10px 0; 
+    }
+
+    .evento .descrizione {
+        text-align: left; 
+    }
+}
+
+
+/*dalle slide + appunti: clear non accetta altri contenitori flottanti ai lati mentre float crea dei contenitori 
+mobili che possono essere posizionati utilizzando float left, right etc.*/
