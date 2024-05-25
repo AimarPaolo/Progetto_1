@@ -26,10 +26,11 @@ function controllaDataEventi() {
     }
 }
 function incrementValue(idCounter){
+    console.log(idCounter);
     let counter = document.getElementById(idCounter).value;
+    console.log(document.getElementById(idCounter).value);
     document.getElementById(idCounter).value = parseInt(counter) + 1;
 }
-
 function decrementValue(idCounter){
     /*inserisco il controllo che decremento solo se il numero è maggiore di uno, in quanto non avrebbe comprare -1 biglietti...*/ 
     if(document.getElementById(idCounter).value == 0){
@@ -38,6 +39,8 @@ function decrementValue(idCounter){
         return
     }
     /*utilizzo le variabili dichiarate come let in quanto più consistenti rispetto alle var*/
+    console.log(idCounter);
     let counter = document.getElementById(idCounter).value;
-    document.getElementById(idCounter).value = counter - 1;
+    console.log(document.getElementById(idCounter).value);
+    document.getElementById(idCounter).value = parseInt(counter) - 1;
 }
