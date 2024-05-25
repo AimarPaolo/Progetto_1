@@ -21,6 +21,7 @@
             <!--ho creato una cartella che contiene tutte le immagini del sito, utilizzando la notazione ./immagini passo dalla 
             casella padre a quella immagini, dentro alla casella immagini vado poi a cercare l'immagine che voglio inserire-->
             <p class="evento">
+                <h1>AC/DC POWER UP tour</h1>
                 <img src="./immagini/evento_1.png" alt="Evento 1, caricamento immagine">
                 <span class="descrizione">In data 25 maggio 2024 si terrà un concerto degli AC/DC, una band leggendaria nel panorama 
                     del rock internazionale. L'evento promette di essere un'esperienza emozionante per i fan della band e gli amanti
@@ -29,9 +30,16 @@
                     incalzante delle chitarre e la batteria energica creerà un'atmosfera coinvolgente e carica di energia. Gli spettatori
                     avranno l'opportunità di immergersi nell'universo sonoro degli AC/DC e di godere di un'esperienza live
                     indimenticabile.</span>
+                    <span class="contatore">
+                        <button id="decrementa" class="contatore" onclick="decrementValue('counter1');">-</button>
+                        <input type="text" id="counter1" value="0" readonly>
+                        <button id="incrementa" class="contatore" onclick="incrementValue('counter1');">+</button>
+                    </span>                
                 <time datetime="2024-05-25T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-05-25 12:00</time>
             </p>
             <p class="evento">
+
+
                 <img src="./immagini/evento_2.jpg" alt="Evento 2, caricamento immagine">
                 <span class="descrizione">
                     Max Pezzali sta per regalare un'esperienza unica ai suoi fan con un concerto solista imperdibile in un'arena cittadina!
@@ -40,6 +48,11 @@
                     suoi successi più amati in un contesto intimo e coinvolgente, con la voce potente di Max che ti avvolgerà e 
                     ti emozionerà come mai prima d'ora. Non perdere l'occasione di essere parte di questo evento indimenticabile! 
                     Acquista subito il tuo biglietto e preparati a vivere una serata che rimarrà impressa nella tua memoria per sempre!
+                </span>
+                <span class="contatore">
+                    <button id="decrementa" class="contatore" onclick="decrementValue('counter2');">-</button>
+                    <input type="text" id="counter2" value="0" readonly>
+                    <button id="incrementa" class="contatore" onclick="incrementValue('counter2');">+</button>
                 </span>
                 <time datetime="2024-07-18T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-07-18 12:00</time>
             </p>
@@ -56,6 +69,11 @@
                     accattivanti, questa canzone promette di essere il punto culminante del concerto, scatenando l'entusiasmo dei fan e 
                     conquistando nuovi seguaci con la sua freschezza e originalità.
                 </span>
+                <span class="contatore">
+                    <button id="decrementa" class="contatore" onclick="decrementValue('counter3');">-</button>
+                    <input type="text" id="counter3" value="0" readonly>
+                    <button id="incrementa" class="contatore" onclick="incrementValue('counter3');">+</button>
+                </span>
                 <time datetime="2024-05-30T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-05-30 12:00</time>
             </p>
             <p class="evento">
@@ -67,8 +85,17 @@
                     positivo. Gli stand saranno allestiti con organizzazioni attiviste e associazioni che condivideranno informazioni sulle questioni 
                     sociali e ambientali, invitando il pubblico a prendere parte alla rivoluzione per un mondo migliore.
                 </span>
+                <span class="contatore">
+                    <button id="decrementa" class="contatore" onclick="decrementValue('counter4');">-</button>
+                    <input type="text" id="counter4" value="0" readonly>
+                    <button id="incrementa" class="contatore" onclick="incrementValue('counter4');">+</button>
+                </span>
                 <time datetime="2024-12-11T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-12-11 12:00</time>
+
+
             </p>
+
+
             <p class="evento">
                 <img src="./immagini/evento_5.jpg" alt="Evento 5, caricamento immagine">
                 <span class="descrizione">
@@ -83,6 +110,11 @@
                     Inoltre, l'evento includerà collaborazioni speciali con artisti ospiti che si esibiranno insieme alla band, rendendo 
                     questa reunion ancora più memorabile.
                 </span>
+                <span class="contatore">
+                    <button id="decrementa" class="contatore" onclick="decrementValue('counter5');">-</button>
+                    <input type="text" id="counter5" value="0" readonly>
+                    <button id="incrementa" class="contatore" onclick="incrementValue('counter5');">+</button>
+                </span>
                 <time datetime="2025-01-24T12:00" class="scadenza">Scadenza acquisto biglietti: 2025-01-24 12:00</time>
             </p>
             <!--usare questo evento per testare se è già scaduto la visualizzazione. Inserire quindi un evento passato e confrontare poi la
@@ -96,7 +128,12 @@
                     nuove canzoni che fanno ballare tutti. Ogni canzone è accompagnata da coreografie mozzafiato e cambi di costume 
                     sorprendenti.
                 </span>
-                <time datetime="2020-03-18T12:00" class="scadenza">Scadenza acquisto biglietti: 2020-03-18 12:00</time>
+                <span class="contatore">
+                    <button id="decrementa" class="contatore" onclick="decrementValue('counter6');">-</button>
+                    <input type="text" id="counter6" value="0" readonly>
+                    <button id="incrementa" class="contatore" onclick="incrementValue('counter6');">+</button>
+                </span>
+                <time datetime="2020-06-02T12:00" class="scadenza">Scadenza acquisto biglietti: 2020-06-02 12:00</time>
             </p>
             <!--si poteva anche utilizzare il comando onload di javascript (quando la pagina è caricata mi lancia la funzione controllaDataEventi)
             ma questo metodo mi sembra anche corretto-->
