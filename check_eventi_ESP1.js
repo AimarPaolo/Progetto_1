@@ -13,7 +13,7 @@ function controllaDataEventi() {
     for (let i = 0; i < eventi.length; i++) {
         //Funzione che prende il valore utilizzato nel tag, e successivamente mi prende il valore dell'attributo "datetime" 
         //presente nel tage time.
-        console.log("valore preso in considerazione: "+eventi[i].getElementsByTagName("time")[0]);
+        console.log("valore preso in considerazione: "+eventi[i].getElementsByTagName("datetime")[0]);
         let dataEventoString = eventi[i].getElementsByTagName("time")[0].getAttribute("datetime");
  
         let dataEvento = new Date(dataEventoString); //--> mi trasformo l'evento nella stringa per poterlo confrontare con la data di oggi 

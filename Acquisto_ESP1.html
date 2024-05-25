@@ -20,8 +20,8 @@
             <h1>Pagina per acquistare i biglietti</h1>
             <!--ho creato una cartella che contiene tutte le immagini del sito, utilizzando la notazione ./immagini passo dalla 
             casella padre a quella immagini, dentro alla casella immagini vado poi a cercare l'immagine che voglio inserire-->
-            <p class="evento">
-                <h1>AC/DC POWER UP tour</h1>
+            <div class="evento">
+                <!--utilizzo h2 per creare il nuovo titolo (non posso usare h3 o h4 etc...)--> <!--non mi fa aggiungere h2, non me lo contiene dentro altrimenti-->
                 <img src="./immagini/evento_1.png" alt="Evento 1, caricamento immagine">
                 <span class="descrizione">In data 25 maggio 2024 si terrà un concerto degli AC/DC, una band leggendaria nel panorama 
                     del rock internazionale. L'evento promette di essere un'esperienza emozionante per i fan della band e gli amanti
@@ -34,12 +34,12 @@
                         <button id="decrementa" class="contatore" onclick="decrementValue('counter1');">-</button>
                         <input type="text" id="counter1" value="0" readonly>
                         <button id="incrementa" class="contatore" onclick="incrementValue('counter1');">+</button>
-                    </span>                
-                <time datetime="2024-05-25T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-05-25 12:00</time>
-            </p>
-            <p class="evento">
-
-
+                    </span>       
+                    <!--inserisco la data dei biglietti facendola visualizzare all'utente, la vendita del biglietto chiude però in un altro orario-->         
+                <time datetime="2024-05-25T12:00" class="scadenza">Data concerto: 2024-05-25 18:00</time>
+                </div>
+            <div class="evento">
+                
                 <img src="./immagini/evento_2.jpg" alt="Evento 2, caricamento immagine">
                 <span class="descrizione">
                     Max Pezzali sta per regalare un'esperienza unica ai suoi fan con un concerto solista imperdibile in un'arena cittadina!
@@ -54,9 +54,9 @@
                     <input type="text" id="counter2" value="0" readonly>
                     <button id="incrementa" class="contatore" onclick="incrementValue('counter2');">+</button>
                 </span>
-                <time datetime="2024-07-18T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-07-18 12:00</time>
-            </p>
-            <p class="evento">
+                <time datetime="2024-07-18T12:00" class="scadenza">Data concerto: 2024-07-18 21:00</time>
+            </div>
+            <div class="evento">
                 <img src="./immagini/evento_3.jpg" alt="Evento 3, caricamento immagine">
                 <span class="descrizione">
                     Questo attesissimo evento porterà la combinazione unica di sonorità elettroniche, orchestrali e influenze da videogiochi 
@@ -74,9 +74,9 @@
                     <input type="text" id="counter3" value="0" readonly>
                     <button id="incrementa" class="contatore" onclick="incrementValue('counter3');">+</button>
                 </span>
-                <time datetime="2024-05-30T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-05-30 12:00</time>
-            </p>
-            <p class="evento">
+                <time datetime="2024-05-30T12:00" class="scadenza">Data concerto: 2024-05-30 20:30</time>
+            </div>
+            <div class="evento">
                 <img src="./immagini/evento_4.jpg" alt="Evento 4, caricamento immagine">
                 <span class="descrizione">
                     Lo spirito ribelle dei Green Days prenderà vita sul palco mentre la band eseguirà una selezione dei loro più grandi 
@@ -90,13 +90,13 @@
                     <input type="text" id="counter4" value="0" readonly>
                     <button id="incrementa" class="contatore" onclick="incrementValue('counter4');">+</button>
                 </span>
-                <time datetime="2024-12-11T12:00" class="scadenza">Scadenza acquisto biglietti: 2024-12-11 12:00</time>
+                <time datetime="2024-12-11T12:00" class="scadenza">Data concerto: 2024-12-11 15:00</time>
 
 
-            </p>
+            </div>
 
 
-            <p class="evento">
+            <div class="evento">
                 <img src="./immagini/evento_5.jpg" alt="Evento 5, caricamento immagine">
                 <span class="descrizione">
                     Dopo anni di attesa e speculazioni, i membri originali dei Pink Floyd annunciano una reunion 
@@ -115,11 +115,11 @@
                     <input type="text" id="counter5" value="0" readonly>
                     <button id="incrementa" class="contatore" onclick="incrementValue('counter5');">+</button>
                 </span>
-                <time datetime="2025-01-24T12:00" class="scadenza">Scadenza acquisto biglietti: 2025-01-24 12:00</time>
-            </p>
+                <time datetime="2025-01-24T12:00" class="scadenza">Data concerto: 2025-01-24 12:00</time>
+            </div>
             <!--usare questo evento per testare se è già scaduto la visualizzazione. Inserire quindi un evento passato e confrontare poi la
             data con la data del server-->
-            <p class="evento">
+            <div class="evento">
                 <img src="./immagini/evento_6.jpeg" alt="Evento 6, caricamento immagine">
                 <span class="descrizione">
                     Il concerto inizia con un'esplosione di fuochi d'artificio nel cielo notturno, mentre sul palco compare Katy Perry, 
@@ -133,8 +133,8 @@
                     <input type="text" id="counter6" value="0" readonly>
                     <button id="incrementa" class="contatore" onclick="incrementValue('counter6');">+</button>
                 </span>
-                <time datetime="2020-06-02T12:00" class="scadenza">Scadenza acquisto biglietti: 2020-06-02 12:00</time>
-            </p>
+                <time datetime="2020-06-02T12:00" class="scadenza">Data concerto: 2020-06-02 12:00</time>
+            </div>
             <!--si poteva anche utilizzare il comando onload di javascript (quando la pagina è caricata mi lancia la funzione controllaDataEventi)
             ma questo metodo mi sembra anche corretto-->
             <script>controllaDataEventi();</script>
