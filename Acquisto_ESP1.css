@@ -108,25 +108,6 @@ h2 {
     font-size: 16px;
 }
 
-@media print {
-    /*inserisco il font serif che è caratteristico della stampa*/
-    body{
-        font-family: serif;  
-    }
-    .evento {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .evento img {
-        margin: 0 0 10px 0;
-    }
-
-    .evento .descrizione {
-        text-align: left;
-    }
-}
 /*utilizzo come sempre sans-serif quando non sono in stampa*/
 .costoBiglietto{
     color: rgb(52, 70, 212);
@@ -171,8 +152,28 @@ h2 {
     background-color: #0545d9;
 }
 .costoTotale{
-    margin-top: 20px;
+    margin-top: 30px;
     clear: both;
+    color:#1c4262
+}
+@media print {
+    /*inserisco il font serif che è caratteristico della stampa*/
+    body{
+        font-family: serif;  
+    }
+    .evento {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .evento img {
+        margin: 0 0 10px 0;
+    }
+
+    .evento .descrizione {
+        text-align: left;
+    }
 }
 /*dalle slide + appunti: clear non accetta altri contenitori flottanti ai lati mentre float crea dei contenitori 
 mobili che possono essere posizionati utilizzando float left, right etc.*/

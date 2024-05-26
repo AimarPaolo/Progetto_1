@@ -5,8 +5,8 @@ function controllaDataEventi() {
 
     //mi seleziona gli eventi dichiarati nella classe evento (mi crea un array)
     let eventi = document.getElementsByClassName("evento");
-    console.log("l'evento preso in considerazione è: "+eventi);
-    /*for (var i = 0; i < eventi.length; i++) {
+    /*console.log("l'evento preso in considerazione è: "+eventi);
+    for (var i = 0; i < eventi.length; i++) {
         console.log(eventi[i])
     }*/
     //creo un ciclo for per controllare ogni singolo evento, eliminando quelli che sono già "scaduti"
@@ -35,9 +35,8 @@ function incrementValue(f1, idCounter, valore, totalId){
     counterElem.value = counter + 1;
     let increment = parseFloat(valore);
     let totalOutput = document.getElementById(totalId);
-    let valoreOra = parseFloat(totalOutput.value);
     //uso la funzione toFixed() per arrotondare il valore ed evitare che mi dia risultati con troppe cifre decimali
-    totalOutput.value = valoreOra + (counter * increment).toFixed(2) + " €";
+    totalOutput.value = parseFloat(parseFloat(counterElem.value) * parseFloat(increment)).toFixed(2);
     
 }
 function decrementValue(f1, idCounter, valore, totalId){
@@ -48,7 +47,6 @@ function decrementValue(f1, idCounter, valore, totalId){
         return
     }
     /*utilizzo le variabili dichiarate come let in quanto più consistenti rispetto alle var*/
-    console.log(idCounter);
     let counter = document.getElementById(idCounter).value;
     /*
     console.log(document.getElementById(idCounter).value);
@@ -56,9 +54,7 @@ function decrementValue(f1, idCounter, valore, totalId){
     document.getElementById(idCounter).value = parseInt(counter) - 1;
     let decrement = parseFloat(valore);
     let totalOutput = document.getElementById(totalId);
-    let valoreOra = parseFloat(totalOutput.value);
-    console.log(valoreOra)
-    totalOutput.value = valoreOra + (counter * decrement).toFixed(2) + " €";
+    totalOutput.value = (parseFloat(document.getElementById(idCounter).value) * (-1) * decrement).toFixed(2);
 }
 
 function validateForm(f1){
