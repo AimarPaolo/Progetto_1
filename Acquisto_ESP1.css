@@ -33,7 +33,6 @@ h2 {
     padding: 20px; 
     background-color: #efefef;
     border-radius: 8px;
-    overflow: hidden; 
 }
 
 .evento img {
@@ -119,11 +118,9 @@ h2 {
 }
 .bottoniFinali {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     margin-top: 20px;
     padding: 10px;
-    background-color: #f2f2f2;
-    border-top: 1px solid #ddd;
 }
 
 .bottoniFinali input[type="submit"],
@@ -143,6 +140,7 @@ h2 {
 .bottoniFinali input[type="reset"] {
     background-color: #36bef4; 
     color: white;
+    margin-left: 10px;
 }
 
 .bottoniFinali input[type="submit"]:hover{
