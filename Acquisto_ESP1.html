@@ -33,13 +33,14 @@
                         avranno l'opportunità di immergersi nell'universo sonoro degli AC/DC e di godere di un'esperienza live
                         indimenticabile.</span>
                         <span class="contatore">
-                            <button type = "button" id="decrementa1" class="contatore" onclick="decrementValue('counter1');">-</button>
+                            <input type = "button" id="decrementa1" class="contatore" value="-" onclick="decrementValue('form1', -59.9, 'tot1');">
                             <input type="text" id="counter1" name="counter1" value="0" readonly>
-                            <button type = "button" id="incrementa1" class="contatore" onclick="incrementValue('counter1');">+</button>
+                            <input type = "button" id="incrementa1" class="contatore" value="+" onclick="incrementValue('form1', 59.9, 'tot1');">
                             <span class="costoBiglietto">Costo del biglietto: 59.90€</span>
-                        </span>       
+                        </span>
+                        <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot1" name="tot1">0 €</output></div>     
                         <!--inserisco la data dei biglietti facendola visualizzare all'utente, la vendita del biglietto chiude però in un altro orario-->         
-                    <time datetime="2024-05-25T12:00" class="scadenza">Data concerto: 2024-05-25 18:00</time>
+                        <time datetime="2024-05-25T12:00" class="scadenza">Data concerto: 2024-05-25 18:00</time>
                     </div>
                 <div class="evento">
                     <h2>Max Forever, Fanta Event</h2>
@@ -53,12 +54,13 @@
                         Acquista subito il tuo biglietto e preparati a vivere una serata che rimarrà impressa nella tua memoria per sempre!
                     </span>
                     <span class="contatore">
-                        <button type = "button" name="decrementa2" class="contatore" onclick="decrementValue('counter2');">-</button>
+                        <input type = "button" name="decrementa2" class="contatore" value="-" onclick="decrementValue('form1','counter2', -39.9 , 'tot2');">
                         <input type="text" id="counter2" name="counter2" value="0" readonly>
-                        <button type = "button" name="incrementa2" class="contatore" onclick="incrementValue('counter2');">+</button>
+                        <input type = "button" name="incrementa2" class="contatore" value="+" onclick="incrementValue('form1','counter2', 39.9 , 'tot2');">
                         <span class="costoBiglietto">Costo del biglietto: 39.90€</span>
                     </span>
-                    <time datetime="2024-07-18T12:00" class="scadenza">Data concerto: 2024-07-18 21:00</time>
+                    <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot2" name="tot2">0 €</output></div>
+                    <time datetime="2024-07-18T12:00" class="scadenza">Data concerto: 18 luglio 2024, ore: 21:00</time>
                 </div>
                 <div class="evento">
                     <h2>Hello World, Pinguini Tattici Nucleari</h2>
@@ -75,11 +77,12 @@
                         conquistando nuovi seguaci con la sua freschezza e originalità.
                     </span>
                     <span class="contatore">
-                        <button type = "button" name="decrementa3" class="contatore" onclick="decrementValue('counter3');">-</button>
+                        <input type = "button" name="decrementa3" class="contatore" value="-" onclick="decrementValue('form1','counter3', -40.9 , 'tot3');">
                         <input type="text" id="counter3" name="counter3" value="0" readonly>
-                        <button type = "button" name="incrementa3" class="contatore" onclick="incrementValue('counter3');">+</button>
+                        <input type = "button" name="incrementa3" class="contatore" value="+" onclick="incrementValue('form1','counter3', 40.9, 'tot3');">
                         <span class="costoBiglietto">Costo del biglietto: 40.90€</span>
                     </span>
+                    <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot3" name="tot3">0 €</output></div>
                     <time datetime="2024-12-30T12:00" class="scadenza">Data concerto: 30 dicembre 2024, ore: 20:00</time>
                 </div>
                 <div class="evento">
@@ -93,12 +96,12 @@
                         sociali e ambientali, invitando il pubblico a prendere parte alla rivoluzione per un mondo migliore.
                     </span>
                     <span class="contatore">
-                        <button type = "button" id="decrementa4" class="contatore" onclick="decrementValue('counter4');">-</button>
+                        <input type = "button" id="decrementa4" class="contatore" value="-" onclick="decrementValue('form1','counter4', -57.9, 'tot4');">
                         <input type="text" id="counter4" name="counter4" value="0" readonly>
-                        <button type = "button" id="incrementa4" class="contatore" onclick="incrementValue('counter4');">+</button>
+                        <input type = "button" id="incrementa4" class="contatore" value="+" onclick="incrementValue('form1','counter4', 57.9 , 'tot4');">
                         <span class="costoBiglietto">Costo del biglietto: 57.90€</span>
-                        <div class="costoTotale"></div>
                     </span>
+                    <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot4" name="tot4">0 €</output></div>
                     <time datetime="2024-06-16T12:00" class="scadenza">Data concerto: 16 giugno 2024, ore: 15:00</time>
 
 
@@ -120,15 +123,15 @@
                         questa reunion ancora più memorabile.
                     </span>
                     <span class="contatore">
-                        <button type = "button" id="decrementa5" class="contatore" onclick="decrementValue('counter5');">-</button>
+                        <input type = "button" id="decrementa5" class="contatore" value="-" onclick="decrementValue('form1', 'counter5', -87, 'tot5');">
                         <input type="text" id="counter5" name="counter5" value="0" readonly>
-                        <button type = "button" id="incrementa5" class="contatore" onclick="incrementValue('counter5');">+</button>
+                        <input type = "button" id="incrementa5" class="contatore" value="+" onclick="incrementValue('form1', 'counter5', 87 , 'tot5');">
                         <span class="costoBiglietto">Costo del biglietto: 87.00€</span>
                         <!--in questo caso utilizzo una casella di testo div, quando invece 
                         farò il prossimo progetto posso provare con output--> <!--per prendere il valore in php penso funzioni solamente con output-->
-                        <div class="costoTotale"><output id="tot5" name="tot5"></output></div>
                     </span>
-                    <time datetime="2025-01-24T12:00" class="scadenza">Data concerto: 2025-01-24 12:00</time>
+                    <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot5" name="tot5">0 €</output></div>
+                    <time datetime="2025-01-24T12:00" class="scadenza">Data concerto: 24 gennaio 2025, ore 12:00</time>
                 </div>
                 <!--usare questo evento per testare se è già scaduto la visualizzazione. Inserire quindi un evento passato e confrontare poi la
                 data con la data del server-->
@@ -142,11 +145,12 @@
                         sorprendenti.
                     </span>
                     <span class="contatore">
-                        <button type = "button" id="decrementa6" class="contatore"  value= onclick="decrementValue('counter6');">-</button>
+                        <input type = "button" id="decrementa6" class="contatore"  value="-" onclick="decrementValue('form1', 'counter6', -230 , 'tot6');">
                         <input type="text" id="counter6" name="counter6" value="0" readonly>
-                        <button type = "button" id="incrementa6" class="contatore" onclick="incrementValue('counter6');">+</button>
+                        <input type = "button" id="incrementa6" class="contatore" value="+" onclick="incrementValue('form1', 'counter6', 230, 'tot6');">
                         <span class="costoBiglietto">Costo del biglietto: 230.00€</span>
                     </span>
+                    <div class="costoTotale">Il costo totale dei biglietti selezionati per questo evento &egrave;: <output id="tot6" name="tot6">0 €</output></div>
                     <time datetime="2020-06-02T12:00" class="scadenza">Data concerto: 2020-06-02 12:00</time>
                 </div>
                 <!--si poteva anche utilizzare il comando onload di javascript (quando la pagina è caricata mi lancia la funzione controllaDataEventi)

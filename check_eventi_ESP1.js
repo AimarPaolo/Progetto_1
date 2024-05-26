@@ -13,7 +13,9 @@ function controllaDataEventi() {
     for (let i = 0; i < eventi.length; i++) {
         //Funzione che prende il valore utilizzato nel tag, e successivamente mi prende il valore dell'attributo "datetime" 
         //presente nel tage time.
-        console.log("valore preso in considerazione: "+eventi[i].getElementsByTagName("datetime")[0]);
+        /*
+        console.log("valore preso in considerazione: "+eventi[i].getElementsByTagName("datetime")[0])
+        */
         let dataEventoString = eventi[i].getElementsByTagName("time")[0].getAttribute("datetime");
  
         let dataEvento = new Date(dataEventoString); //--> mi trasformo l'evento nella stringa per poterlo confrontare con la data di oggi 
@@ -25,13 +27,20 @@ function controllaDataEventi() {
         }
     }
 }
-function incrementValue(idCounter){
-    console.log(idCounter);
-    let counter = document.getElementById(idCounter).value;
-    console.log(document.getElementById(idCounter).value);
-    document.getElementById(idCounter).value = parseInt(counter) + 1;
+function incrementValue(f1, idCounter, valore, totalId){
+    const fo1 = document.getElementById(f1);
+    /*console.log(idCounter);*/
+    let counterElem = document.getElementById(idCounter);
+    let counter = parseInt(counterElem.value);
+    counterElem.value = counter + 1;
+    let increment = parseFloat(valore);
+    let totalOutput = document.getElementById(totalId);
+    let valoreOra = parseFloat(totalOutput.value);
+    //uso la funzione toFixed() per arrotondare il valore ed evitare che mi dia risultati con troppe cifre decimali
+    totalOutput.value = valoreOra + (counter * increment).toFixed(2) + " €";
+    
 }
-function decrementValue(idCounter){
+function decrementValue(f1, idCounter, valore, totalId){
     /*inserisco il controllo che decremento solo se il numero è maggiore di uno, in quanto non avrebbe comprare -1 biglietti...*/ 
     if(document.getElementById(idCounter).value == 0){
         /*volendo si può aggiungere un avvertimento all'utente*/
@@ -41,8 +50,15 @@ function decrementValue(idCounter){
     /*utilizzo le variabili dichiarate come let in quanto più consistenti rispetto alle var*/
     console.log(idCounter);
     let counter = document.getElementById(idCounter).value;
+    /*
     console.log(document.getElementById(idCounter).value);
+    */
     document.getElementById(idCounter).value = parseInt(counter) - 1;
+    let decrement = parseFloat(valore);
+    let totalOutput = document.getElementById(totalId);
+    let valoreOra = parseFloat(totalOutput.value);
+    console.log(valoreOra)
+    totalOutput.value = valoreOra + (counter * decrement).toFixed(2) + " €";
 }
 
 function validateForm(f1){

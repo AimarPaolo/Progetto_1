@@ -79,7 +79,7 @@ h2 {
     margin-top: 10px;
 }
 
-.contatore button {
+.contatore input[type=button] {
     width: 30px;
     height: 30px;
     background-color: #4ba7f8;
@@ -94,7 +94,7 @@ h2 {
     transition: background-color 0.3s;
 }
 
-.contatore button:hover {
+.contatore input[type=button]:hover {
     background-color: #0056b3;
 }
 
@@ -169,6 +169,10 @@ h2 {
 }
 .bottoniFinali input[type="reset"]:hover {
     background-color: #0545d9;
+}
+.costoTotale{
+    margin-top: 20px;
+    clear: both;
 }
 /*dalle slide + appunti: clear non accetta altri contenitori flottanti ai lati mentre float crea dei contenitori 
 mobili che possono essere posizionati utilizzando float left, right etc.*/
