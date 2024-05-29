@@ -164,9 +164,9 @@ h2 {
         align-items: center;
         text-align: center;
     }
-
+    /*aggiungo dei margini in modo che quando provo ad andare in stampa il testo della descrizione non rimanga troppo attaccato all'immagine*/
     .evento img {
-        margin: 0 0 10px 0;
+        margin: 10px 10px 10px 10px;
     }
 
     .evento .descrizione {
