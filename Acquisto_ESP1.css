@@ -1,26 +1,29 @@
+/*Utilizzo in gran parte dei case le misure relative anziche quelle assolute in px perchè almeno rimangono proporzionate su qualunque dispositivo 
+che visualizza il sito*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    font-size: 16px;
 }
 
 .contenitore {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 62.5rem;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     color: #080345;
 }
 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     color: #1c4262;
 }
@@ -29,21 +32,20 @@ h2 {
     /*utilizzo le flexbox per adattare la grandezza delle immagini a quello della descrizione dell'evento, che altrimenti risulterebbe
     sproporzionato nelle misure --> link per le flexbox: https://www.w3schools.com/css/css3_flexbox_container.asp*/
     /*display: flex; */
-    margin-bottom: 20px;
-    padding: 20px; 
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
     background-color: #efefef;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .evento img {
     /*modificando il tasto ispeziona fino a quando non si ottiene un'immagine più o meno corretta*/
-    max-width: 200px;
+    max-width: 12.5rem;
     height: fit-content;
     width: fit-content;
-    margin-right: 20px;
-    border-radius: 8px;
+    margin-right: 1.25rem;
+    border-radius: 0.5rem;
     /*aumento il margine di sotto dell'immagine in modo che il testo della descrizione non vada ad inserirsi subito sotto l'immagine*/
-    
     float: left;
 }
 
@@ -53,39 +55,30 @@ h2 {
     color: #333;
     /*imposta la spaziatura dei caratteri nella pagina*/
     line-height: 1.3;
-
 }
-/* .scadenza{
-    clear: both;
-    //con display block mando a capo la scadenza e questa dovrebbe occupare tutto lo spazio disponibile nella riga
-    display: block;
-    text-align: left;
-    margin-top: 10px;
-    color: #666;
-    //inserisco clear both per mandare a capo la data ed inserirla subito sotto l'immagine
-    }*/
 
 .scadenza {
     clear: both;
     display: block;
     text-align: left;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     color: #666;
 }
+
 .contatore {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .contatore input[type=button] {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     background-color: #4ba7f8;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 0.3125rem;
+    font-size: 1.125rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -98,13 +91,13 @@ h2 {
 }
 
 .contatore input {
-    width: 50px;
-    height: 30px;
+    width: 3.125rem;
+    height: 1.875rem;
     text-align: center;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0 5px;
-    font-size: 16px;
+    border-radius: 0.3125rem;
+    margin: 0 0.3125rem;
+    font-size: 1rem;
 }
 
 /*utilizzo come sempre sans-serif quando non sono in stampa*/
@@ -119,20 +112,20 @@ h2 {
 .bottoniFinali {
     display: flex;
     justify-content: left;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 1.25rem;
+    padding: 0.625rem;
 }
 
 .bottoniFinali input[type="submit"],
 .bottoniFinali input[type="reset"] {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
 }
 
-.bottoniFinali input[type="submit"] {
+bottoniFinali input[type="submit"] {
     background-color: #5e4caf; 
     color: white;
 }
@@ -140,23 +133,26 @@ h2 {
 .bottoniFinali input[type="reset"] {
     background-color: #36bef4; 
     color: white;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
-.bottoniFinali input[type="submit"]:hover{
-    background-color: #080345;
+.bottoniFinali input[type="submit"]:hover {
+    background-color: #abbefa;
 }
 .bottoniFinali input[type="reset"]:hover {
     background-color: #0545d9;
 }
-.costoTotale{
-    margin-top: 30px;
+
+.costoTotale {
+    margin-top: 1.875rem;
     clear: both;
-    color:#1c4262
+    color: #1c4262;
 }
+/*in questo caso potrei utilizzare anche le misure assolute ma lo lascio in questo modo, la cosa importante è che non vengano utilizzate 
+nella stampa del sito web normale*/
 @media print {
     /*inserisco il font serif che è caratteristico della stampa*/
-    body{
+    body {
         font-family: serif;  
     }
     .evento {
@@ -166,7 +162,7 @@ h2 {
     }
     /*aggiungo dei margini in modo che quando provo ad andare in stampa il testo della descrizione non rimanga troppo attaccato all'immagine*/
     .evento img {
-        margin: 10px 10px 10px 10px;
+        margin: 0.625rem;
     }
 
     .evento .descrizione {
