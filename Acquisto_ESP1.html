@@ -13,6 +13,15 @@
         <script src="check_eventi_ESP1.js"></script>
     </head>
     <body>
+        <div class="navbar">
+            <!--In questo caso dichiaro una classe attiva in modo da cambiare ogni volta il colore e far capire in modo più chiaro all'utente
+            in quale pagina si trova-->
+            <!--utilizzo un menù per collegare le pagine, volendo si potevano anche utilizzare altri bottoni ma l'utente potrebbe rimanere 
+            leggermente confuso. Meglio utilizzare oggetti più intuitivi che aiutino il cliente a capire come spostarsi-->
+            <a href="home.html">Home</a>
+            <a href="Acquisto_ESP1.html">Acquista un biglietto</a>
+            <a href="Login_ESP1.html">Torna al login</a>
+        </div>
         <form action="carrello.php" method="get" id="form1" name="form1" onsubmit="return validateForm('form1');">
             <!--per controllare che la pagina contenga solo gli eventi che non sono già passati posso utilizzare javascript, utilizzo un file js
             dove controllo la data che ho inserito manualmente e la confronto con quella attuale (guardo la data presente nel server utilizzando
@@ -160,7 +169,7 @@
             <!--Controllo che nel carrello venga inserito almento un oggetto, altrimenti avvisa l'utente di 
             aggiungere almeno un elemento al carrello all'acquisto-->
             <div class="bottoniFinali">
-                <input type="submit" name="carrello" id="carrello" value="vai al carrello">
+                <input type="submit" name="carrello" id="carrello" value="aggiungi al carrello">
                 <input type="reset" name="cancella" id="cancella" value="cancella">
             </div>
         </form>
