@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .contenitore {
@@ -114,6 +114,7 @@ h2 {
     justify-content: left;
     margin-top: 1.25rem;
     padding: 0.625rem;
+    align-items: center;
 }
 
 .bottoniFinali input[type="submit"],
