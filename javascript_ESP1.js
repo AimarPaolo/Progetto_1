@@ -27,5 +27,5 @@ function validateForm(f1){
 }
 function openSubscription(){
     //utilizzo questo comando per reindirizzare la pagina HTML dalla pagina accedi alla pagina di registrazione
-    window.location.href = 'Registrazione_ESP1.html';
+    window.location.href = 'registrazione.php';
 }

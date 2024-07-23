@@ -130,6 +130,7 @@ h2 {
     opacity: 0.6;
 }
 .bottoniFinali {
+    margin-left:40%;
     display: flex;
     justify-content: left;
     margin-top: 1.25rem;

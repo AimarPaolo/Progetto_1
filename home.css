@@ -29,6 +29,7 @@ body {
 }
 h1{
     text-align: center;
+    color:darkblue;
 }
 h2{
     font-size: medium;
@@ -45,6 +46,6 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: right;
 }
-img{
-    float: left;
+figure{
+  margin:auto;
 }

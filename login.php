@@ -1,3 +1,17 @@
+<?php
+    include("aperturaSessioni.php");
+    if(isset($_REQUEST["email"]) && isset($_REQUEST["pswrd"])){
+        $email = trim($_REQUEST["email"]);
+        $password = trim($_REQUEST["pswrd"]);
+        $nome = $_COOKIE["utente"]["nome"];
+        echo "$nome";
+        if($email == $_COOKIE["utente"]["nome"]){
+            $_SESSION["login"] = true;
+        }else{
+            echo "nome utente errato";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="it">
     <head>
@@ -15,7 +29,13 @@
     <body>
         <div class="contenitore">
             <h1>Inserisci i dati per effettuare il login</h1>
-            <form action="home.html" id="contactForm" name="contactForm" method="get" onsubmit="return validateForm('contactForm');">
+            <form action="login.php" id="contactForm" name="contactForm" method="get" onsubmit="return validateForm('contactForm');">
+            <?php
+                if(isset($_SESSION["successo"])){
+                    $messaggio = $_SESSION["successo"];
+                    echo "<div>$messaggio</div>";
+                }
+            ?>
                 <p>
                     <!--Creo delle label per ogni singolo input text in modo che si chiarifichi meglio come andare ad inserire le informazioni-->
                     <label for="email">email:</label>
