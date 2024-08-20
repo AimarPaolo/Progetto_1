@@ -7,9 +7,9 @@
         setcookie("utente", $utente, time() + 57600, "/");*/
         //il metodo che utilizza i cookie non è sufficientemente sicuro. Preferisco utilizzare il database in quanto risulta più sicuro per 
         //salvare i dati privati
-        $nome_server = "localhost";
-        $username = "root";
-        $password_accesso = "paolo";
+        $nome_server = $_SERVER["SERVER_ADDR"];
+        $username = "uReadWrite";
+        $password_accesso = "SuperPippo!!!";
         $nome_database = "tickets_online";
 
         $conn = mysqli_connect($nome_server, $username, $password_accesso, $nome_database); 
@@ -17,7 +17,7 @@
         if (!$conn) {
             die("Connessione fallita: " . mysqli_connect_error());
         }
-        $query = "SELECT email FROM utenti WHERE email = ?";
+        $query = "SELECT utenti.email FROM utenti WHERE email = ?";
         /*controllo che la mail non sia già stata utilizzata */
         $stmt = mysqli_prepare($conn, $query);
         /*con questo comando associo la connessione alla query*/ 
@@ -40,10 +40,9 @@
                 header("Location: registrazione.php");
                 mysqli_stmt_close($stmt);
                 mysqli_close($conn);
+                header("Location: registrazione.php");
                 exit();
         }else{
-            
-            $_SESSION["entrato"] = true;
             $_SESSION["nome_utente"] = $nome_utente;
             $_SESSION["successo"] = "registrazione effettuata con successo";
             mysqli_stmt_close($stmt);
@@ -60,11 +59,11 @@
         <meta charset="UTF-8">
         <title>Registrazione Utente</title>
         <meta name="author" content="Paolo Aimar">
-        <link rel="stylesheet" href="Registrazione_ESP1.css">
+        <link rel="stylesheet" href="../css/Registrazione_ESP1.css">
         <meta name="keywords" lang="it" content="html">
         <meta name="description" content="Pagina per registrarsi al sito">
-        <meta http-equiv="refresh" content="300">
-        <script src="check_registrazione.js"></script>
+        <meta http-equiv="refresh" content="3000">
+        <script src="../javascript/check_registrazione.js"></script>
     </head>
     <body>
         <div class="contenitore">
@@ -74,6 +73,7 @@
                     if(isset($_SESSION["messaggio_di_errore"])){
                         $messaggio = $_SESSION["messaggio_di_errore"];
                         echo "<div>$messaggio</div>";
+                        unset($_SESSION["messaggio_di_errore"]);
                     }
                 ?>
                 <p>

@@ -193,3 +193,47 @@ nella stampa del sito web normale*/
 }
 /*dalle slide + appunti: clear non accetta altri contenitori flottanti ai lati mentre float crea dei contenitori 
 mobili che possono essere posizionati utilizzando float left, right etc.*/
+.messaggio{
+    font-size: medium;
+    color:#080345;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.bordo{
+    margin: 1rem;
+}
+
+#pagina_logout{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#richiesta{
+    color: rgb(38, 47, 133);
+    font-weight: bold;
+}
+.bottoni{
+    justify-content: left;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    /*utilizzando il pointer rendo l'utente consapevole di essere sopra un qualcosa che è possibile selezionare*/
+    cursor: pointer;
+    background-color: #122644; 
+    color: white;
+    /*inserisco una transizione per far cambiare il colore in modo uniforme --> 0.5 è quella che forse è più
+    utile e ideale, tempi superiori sarebbero esagerati mentre inferiori sono poco percepibili*/
+    transition: 0.5s;
+    margin: auto;
+    /*inserisco questo margin per staccare i bottoni di login e cancella quando viene ripiggiolita la finestra*/
+    margin-top: 1rem;
+}
+
+/*per i bottoni, faccio cambiare il colore quando si passa sopra con il mouse per rendere più visibile e più intuitivo il sito
+agli utenti*/
+.bottoni:hover{
+    background-color: rgb(18, 61, 117);
+}

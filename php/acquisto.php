@@ -1,3 +1,28 @@
+<?php
+    include("aperturaSessioni.php");
+    if(!isset($_SESSION["entrato"])){
+        ?>
+        <!DOCTYPE html>
+        <html lang="it">
+            <head>
+                <meta charset="UTF-8">
+                <title>Interfaccia Utente ESP1</title>
+                <meta name="author" content="Paolo Aimar">
+                <link rel="stylesheet" href="../css/Login_ESP1_CSS.css">
+                <meta name="keywords" lang="it" content="html">
+                <!--in questo caso fornisco una breve descrizione della pagina nella parte di header, in modo da informare le persone 
+                sulle operazioni che vengono svolte nella pagina-->
+                <meta name="description" content="Pagina per registrarsi al sito">
+                <meta http-equiv="refresh" content="60">
+                <script src="../javascript/javascript_ESP1.js"></script>
+            </head>
+            <body>
+                <div>Errore nel login, prova di nuovo ad eseguirlo <a href="login.php">>>Login</a></div>
+            </body>
+        </html>
+        <?php
+    }else{
+?>
 <!DOCTYPE html>
 <html lang="it">
     <head>
@@ -9,8 +34,8 @@
         <!--in questo caso la pagina viene aggiornata ogni 10 minuti, in quanto magari ci vuole qualche secondo in più per scegliere gli eventi
         e quindi non sarebbe corretto aggiornarla ogni 60 secondi (l'utente non avrebbe il tempo di scegliere i biglietti per l'evento)-->
         <meta http-equiv="refresh" content="600">
-        <link rel="stylesheet" href="Acquisto_ESP1.css">
-        <script src="check_eventi_ESP1.js"></script>
+        <link rel="stylesheet" href="../css/Acquisto_ESP1.css">
+        <script src="../javascript/check_eventi_ESP1.js"></script>
     </head>
     <body>
         <div class="navbar">
@@ -19,9 +44,12 @@
             <!--utilizzo un menù per collegare le pagine, volendo si potevano anche utilizzare altri bottoni ma l'utente potrebbe rimanere 
             leggermente confuso. Meglio utilizzare oggetti più intuitivi che aiutino il cliente a capire come spostarsi-->
             <a href="home.html">Home</a>
-            <a href="Acquisto_ESP1.html">Acquista un biglietto</a>
-            <a href="Login_ESP1.html">Torna al login</a>
+            <a href="acquisto.php">Acquista un biglietto</a>
+            <!--permetto all'utente di effettuare un logout nel caso in cui voglia acquistare i biglietti utilizzando un'altra email-->
+            <a href="logout.php">Logout</a>
+            <a href="carrello.php">Carrello Acquisti</a>
         </div>
+        <div class="messaggio">Accesso eseguito come: <?php echo $_SESSION["nome_utente"];?></div>
         <form action="carrello.php" method="get" id="form1" name="form1" onsubmit="return validateForm('form1');">
             <!--per controllare che la pagina contenga solo gli eventi che non sono già passati posso utilizzare javascript, utilizzo un file js
             dove controllo la data che ho inserito manualmente e la confronto con quella attuale (guardo la data presente nel server utilizzando
@@ -175,3 +203,6 @@
         </form>
     </body>
 </html>
+<?php
+    }
+?>
