@@ -64,6 +64,7 @@
         sulle operazioni che vengono svolte nella pagina-->
         <meta name="description" content="Pagina per registrarsi al sito">
         <meta http-equiv="refresh" content="60">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../javascript/javascript_ESP1.js"></script>
     </head>
     <body>

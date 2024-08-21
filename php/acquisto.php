@@ -34,6 +34,7 @@
         <!--in questo caso la pagina viene aggiornata ogni 10 minuti, in quanto magari ci vuole qualche secondo in più per scegliere gli eventi
         e quindi non sarebbe corretto aggiornarla ogni 60 secondi (l'utente non avrebbe il tempo di scegliere i biglietti per l'evento)-->
         <meta http-equiv="refresh" content="600">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/Acquisto_ESP1.css">
         <script src="../javascript/check_eventi_ESP1.js"></script>
     </head>
@@ -49,6 +50,13 @@
             <a href="logout.php">Logout</a>
             <a href="carrello.php">Carrello Acquisti</a>
         </div>
+        <?php
+        if(isset($_SESSION["acquisto"])){
+            $messaggio = "Il carrello è stato svuotato e i prodotti sono stati acquistati correttamente!!";
+            echo "<p class=\"successo\">".$messaggio."</p>";
+            unset($_SESSION["acquisto"]);
+        }
+        ?>
         <div class="messaggio">Accesso eseguito come: <?php echo $_SESSION["nome_utente"];?></div>
         <form action="carrello.php" method="get" id="form1" name="form1" onsubmit="return validateForm('form1');">
             <!--per controllare che la pagina contenga solo gli eventi che non sono già passati posso utilizzare javascript, utilizzo un file js

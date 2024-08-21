@@ -237,3 +237,49 @@ agli utenti*/
 .bottoni:hover{
     background-color: rgb(18, 61, 117);
 }
+table {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+    background-color: #1f42b4;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #030742;
+}
+
+th {
+    background-color: #3481d8;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #6b61fd;
+}
+
+td {
+    text-align: center;
+}
+.successo{
+    color: rgb(36, 173, 128);
+    font-size: 0.9rem;
+    margin-left: 2rem;
+}
+
+.check{
+    color:#4c91d7;
+    margin:3rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+#colora{
+    background-color: #122f64;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+}

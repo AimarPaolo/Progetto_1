@@ -63,6 +63,7 @@
         <meta name="keywords" lang="it" content="html">
         <meta name="description" content="Pagina per registrarsi al sito">
         <meta http-equiv="refresh" content="3000">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../javascript/check_registrazione.js"></script>
     </head>
     <body>
